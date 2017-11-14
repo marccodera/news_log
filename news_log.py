@@ -130,26 +130,27 @@ def get_log_errors_day_percent():
     conn.close()
     # Connection is needed to be closed
 
-text1 = (
-    "\n- Descending list with the three most popular "
-    "articles of all time:")
-print (text1)
-articles = get_articles_most_seen()
-# articles is a list of tuples and it has to be printed in a nicely way
-for p in articles:
-    print (p[0], " - ", p[1])
+if __name__ == "__main__":
+    text1 = (
+        "\n- Descending list with the three most popular "
+        "articles of all time:")
+    print (text1)
+    articles = get_articles_most_seen()
+    # articles is a list of tuples and it has to be printed in a nicely way
+    for p in articles:
+        print (p[0], " - ", p[1])
 
-text2 = (
-    "\n- Descending list with the ranking of the most "
-    "popular authors of all time:")
-print (text2)
-authors = get_authors_most_seen()
-# authors is a list of tuples and it has to be printed in a nicely way
-for p in authors:
-    print (p[0], " - ", p[1])
+    text2 = (
+        "\n- Descending list with the ranking of the most "
+        "popular authors of all time:")
+    print (text2)
+    authors = get_authors_most_seen()
+    # authors is a list of tuples and it has to be printed in a nicely way
+    for p in authors:
+        print (p[0], " - ", p[1])
 
-print ("\n- Descending list of days having more than 1% of errors:")
-errors = get_log_errors_day_percent()
-# errors is a list of tuples and it has to be printed in a nicely way
-for p in errors:
-    print (p[0], " - ", p[1])
+    print ("\n- Descending list of days having more than 1% of errors:")
+    errors = get_log_errors_day_percent()
+    # errors is a list of tuples and it has to be printed in a nicely way
+    for p in errors:
+        print (p[0], " - ", p[1])
